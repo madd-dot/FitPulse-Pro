@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Clearance | FitPulse Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark h-screen flex flex-col justify-center items-center px-6 text-text-main">
+    <a href="index.html" class="absolute top-10 left-10 flex items-center gap-2 text-text-muted hover:text-primary transition-colors uppercase font-bold text-xs tracking-widest">
+        <i data-lucide="chevron-left" class="w-4 h-4"></i> Back Home
+    </a>
+
+    <div class="w-full max-w-md bg-surface border border-edge p-10 rounded-3xl clean-shadow">
+        <div class="flex flex-col items-center mb-8">
+            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4">
+                <i data-lucide="user-plus" class="text-white w-6 h-6"></i>
+            </div>
+            <h1 class="text-2xl font-black tracking-tighter uppercase mb-1">New Application</h1>
+            <p class="text-text-muted text-xs font-semibold uppercase tracking-widest">Join the Elite Performance Network</p>
+        </div>
+
+        <form id="signup-form" class="space-y-4">
+            <div>
+                <label class="block text-[10px] font-black uppercase tracking-widest text-text-muted mb-2">Display Name</label>
+                <input type="text" placeholder="John Wick" required
+                       class="w-full bg-dark border border-edge p-4 rounded-xl text-text-main focus:border-primary focus:outline-none transition-all placeholder:text-slate-300">
+            </div>
+            <div>
+                <label class="block text-[10px] font-black uppercase tracking-widest text-text-muted mb-2">Target Email</label>
+                <input type="email" placeholder="pro@athlete.com" required
+                       class="w-full bg-dark border border-edge p-4 rounded-xl text-text-main focus:border-primary focus:outline-none transition-all placeholder:text-slate-300">
+            </div>
+            <div>
+                <label class="block text-[10px] font-black uppercase tracking-widest text-text-muted mb-2">Security Key</label>
+                <input type="password" placeholder="Min 8 characters" required
+                       class="w-full bg-dark border border-edge p-4 rounded-xl text-text-main focus:border-primary focus:outline-none transition-all placeholder:text-slate-300">
+            </div>
+            <div class="flex items-start gap-3 py-2">
+                <input type="checkbox" id="terms" class="mt-1 accent-primary" required>
+                <label for="terms" class="text-[10px] font-bold text-text-muted uppercase tracking-wider leading-relaxed">
+                    I acknowledge that I am physically fit to participate in high-intensity training protocols.
+                </label>
+            </div>
+            <button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-black text-lg uppercase tracking-tight clean-btn mt-2">
+                Begin Transformation
+            </button>
+        </form>
+
+        <div class="mt-8 text-center text-sm">
+            <span class="text-text-muted font-bold uppercase tracking-widest">Active clearance?</span>
+            <a href="login.html" class="text-primary font-black uppercase tracking-widest ml-2 hover:underline">Secure Login</a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

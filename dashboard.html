@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Hub | FitPulse Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar p-6 bg-surface border-r border-edge">
+        <div class="flex items-center gap-3 mb-12">
+            <i data-lucide="activity" class="text-primary w-8 h-8"></i>
+            <span class="text-xl font-black tracking-tighter uppercase whitespace-nowrap text-text-main">FitPulse <span class="text-primary">Pro</span></span>
+        </div>
+
+        <nav class="flex-1 space-y-2">
+            <a href="#" class="flex items-center gap-4 p-4 rounded-xl bg-emerald-50 text-primary font-bold transition-all">
+                <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                <span class="uppercase tracking-widest text-xs">Overview</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 p-4 rounded-xl text-text-muted hover:text-text-main hover:bg-dark font-bold transition-all">
+                <i data-lucide="activity" class="w-5 h-5"></i>
+                <span class="uppercase tracking-widest text-xs">Activity</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 p-4 rounded-xl text-text-muted hover:text-text-main hover:bg-dark font-bold transition-all">
+                <i data-lucide="target" class="w-5 h-5"></i>
+                <span class="uppercase tracking-widest text-xs">Biometrics</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 p-4 rounded-xl text-text-muted hover:text-text-main hover:bg-dark font-bold transition-all">
+                <i data-lucide="users" class="w-5 h-5"></i>
+                <span class="uppercase tracking-widest text-xs">Teams</span>
+            </a>
+            <a href="about.html" class="flex items-center gap-4 p-4 rounded-xl text-text-muted hover:text-text-main hover:bg-dark font-bold transition-all">
+                <i data-lucide="info" class="w-5 h-5"></i>
+                <span class="uppercase tracking-widest text-xs">About</span>
+            </a>
+        </nav>
+
+        <div class="mt-auto pt-6 border-t border-edge">
+            <div class="flex items-center gap-3 p-4 bg-dark rounded-2xl mb-4">
+                <div class="w-10 h-10 rounded-full bg-edge flex items-center justify-center text-primary font-black uppercase">JD</div>
+                <div class="overflow-hidden">
+                    <span class="block text-sm font-bold truncate uppercase tracking-tighter text-text-main">Jean Dupont</span>
+                    <span class="block text-[10px] text-text-muted uppercase tracking-widest">Elite Tier</span>
+                </div>
+            </div>
+            <a href="index.html" class="flex items-center gap-4 p-4 text-red-500 hover:bg-red-50 rounded-xl transition-all font-bold">
+                <i data-lucide="log-out" class="w-5 h-5"></i>
+                <span class="uppercase tracking-widest text-xs">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="flex items-center justify-between mb-12">
+            <div>
+                <h1 class="text-4xl font-black tracking-tighter uppercase text-text-main">Biometric Hub</h1>
+                <p class="text-text-muted font-bold uppercase tracking-[0.2em] text-[10px]">Session Status: <span class="bg-emerald-100 text-primary px-2 py-0.5 rounded ml-2">Active Sync</span></p>
+            </div>
+            <div class="flex gap-4">
+                <button id="open-modal" class="bg-surface border border-edge p-4 rounded-xl hover:border-primary transition-all group clean-shadow">
+                    <i data-lucide="plus" class="w-6 h-6 text-text-muted group-hover:text-primary"></i>
+                </button>
+                <div class="w-14 h-14 rounded-xl border border-edge flex items-center justify-center bg-surface clean-shadow">
+                    <i data-lucide="bell" class="w-6 h-6 text-text-muted"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="bg-surface border border-edge p-8 rounded-3xl clean-shadow">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="text-[10px] font-black tracking-widest text-text-muted uppercase">Avg Pulse</span>
+                    <i data-lucide="heart" class="text-red-500 w-5 h-5"></i>
+                </div>
+                <div class="text-4xl font-black font-mono mb-2 text-text-main">142 <span class="text-sm font-normal text-text-muted">BPM</span></div>
+                <div class="text-[10px] text-primary font-bold uppercase tracking-widest">↑ 4% from avg</div>
+            </div>
+            <div class="bg-surface border border-edge p-8 rounded-3xl clean-shadow">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="text-[10px] font-black tracking-widest text-text-muted uppercase">Fatigue Level</span>
+                    <i data-lucide="battery" class="text-primary w-5 h-5"></i>
+                </div>
+                <div class="text-4xl font-black font-mono mb-2 text-text-main">24 <span class="text-sm font-normal text-text-muted">%</span></div>
+                <div class="text-[10px] text-yellow-600 font-bold uppercase tracking-widest">Optimal Range</div>
+            </div>
+            <div class="bg-surface border border-edge p-8 rounded-3xl clean-shadow">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="text-[10px] font-black tracking-widest text-text-muted uppercase">Weekly Reps</span>
+                    <i data-lucide="dumbbell" class="text-blue-500 w-5 h-5"></i>
+                </div>
+                <div class="text-4xl font-black font-mono mb-2 text-text-main">1.2K</div>
+                <div class="text-[10px] text-text-muted font-bold uppercase tracking-widest">Goal: 1.5K</div>
+            </div>
+            <div class="bg-surface border border-edge p-8 rounded-3xl clean-shadow">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="text-[10px] font-black tracking-widest text-text-muted uppercase">Sleep Index</span>
+                    <i data-lucide="moon" class="text-purple-500 w-5 h-5"></i>
+                </div>
+                <div class="text-4xl font-black font-mono mb-2 text-text-main">88 <span class="text-sm font-normal text-text-muted">Pts</span></div>
+                <div class="text-[10px] text-primary font-bold uppercase tracking-widest">Excellent recovery</div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="lg:col-span-2 bg-surface border border-edge p-8 rounded-3xl clean-shadow">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-xl font-black uppercase tracking-tighter text-text-main">Performance Spectrum</h2>
+                    <div class="flex gap-2">
+                        <button class="bg-emerald-50 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest border border-primary text-primary">7 Days</button>
+                        <button class="bg-white px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest border border-edge text-text-muted">30 Days</button>
+                    </div>
+                </div>
+                <canvas id="performanceChart" height="250"></canvas>
+            </div>
+
+            <div class="bg-surface border border-edge p-8 rounded-3xl flex flex-col clean-shadow">
+                <h2 class="text-xl font-black uppercase tracking-tighter mb-8 text-center text-text-main">Muscle Load</h2>
+                <div class="flex-1 flex items-end justify-center gap-4 pb-4">
+                    <!-- Custom Bar Chart -->
+                    <div class="flex flex-col items-center gap-4 group">
+                        <div class="w-12 bg-emerald-50 rounded-lg relative overflow-hidden h-40">
+                            <div class="absolute bottom-0 w-full bg-emerald-100 group-hover:bg-primary transition-colors" style="height: 80%"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase text-text-muted">Back</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-4 group">
+                        <div class="w-12 bg-emerald-50 rounded-lg relative overflow-hidden h-40">
+                            <div class="absolute bottom-0 w-full bg-emerald-100 group-hover:bg-primary transition-colors" style="height: 45%"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase text-text-muted">Legs</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-4 group">
+                        <div class="w-12 bg-emerald-50 rounded-lg relative overflow-hidden h-40">
+                            <div class="absolute bottom-0 w-full bg-emerald-100 group-hover:bg-primary transition-colors" style="height: 60%"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase text-text-muted">Arms</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-4 group">
+                        <div class="w-12 bg-emerald-50 rounded-lg relative overflow-hidden h-40">
+                            <div class="absolute bottom-0 w-full bg-primary" style="height: 95%"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase text-text-muted">Core</span>
+                    </div>
+                </div>
+                <p class="text-xs text-text-muted font-bold uppercase text-center mt-6 tracking-widest">Goal: Increase Leg Volume</p>
+            </div>
+        </div>
+
+        <!-- Activity List -->
+        <div class="bg-surface border border-edge rounded-3xl overflow-hidden clean-shadow">
+            <div class="p-8 border-b border-edge">
+                <h2 class="text-xl font-black uppercase tracking-tighter text-text-main">Recent Benchmarks</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-dark text-[10px] font-black uppercase tracking-[0.2em] text-text-muted">
+                            <th class="p-6 text-text-muted">Protocol</th>
+                            <th class="p-6 text-text-muted">Intensity</th>
+                            <th class="p-6 text-text-muted">Duration</th>
+                            <th class="p-6 text-text-muted">Score</th>
+                            <th class="p-6 text-right text-text-muted">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm font-semibold divide-y divide-edge text-text-main">
+                        <tr class="hover:bg-dark transition-colors group">
+                            <td class="p-6 flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-primary">
+                                    <i data-lucide="zap" class="w-5 h-5"></i>
+                                </div>
+                                <span>High Intensity Interval</span>
+                            </td>
+                            <td class="p-6"><span class="bg-emerald-100 text-primary px-3 py-1 rounded-full text-[10px] uppercase">Elite</span></td>
+                            <td class="p-6 font-mono text-text-muted">45:00</td>
+                            <td class="p-6 text-primary">A+</td>
+                            <td class="p-6 text-right"><i data-lucide="more-horizontal" class="inline w-5 h-5 text-gray-300 cursor-pointer"></i></td>
+                        </tr>
+                        <tr class="hover:bg-dark transition-colors group">
+                            <td class="p-6 flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-500">
+                                    <i data-lucide="navigation" class="w-5 h-5"></i>
+                                </div>
+                                <span>Deep Mobility Scan</span>
+                            </td>
+                            <td class="p-6"><span class="bg-blue-50 text-blue-500 px-3 py-1 rounded-full text-[10px] uppercase">Recovery</span></td>
+                            <td class="p-6 font-mono text-text-muted">15:00</td>
+                            <td class="p-6 text-text-main">B+</td>
+                            <td class="p-6 text-right"><i data-lucide="more-horizontal" class="inline w-5 h-5 text-gray-300 cursor-pointer"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal (Interactive Component) -->
+    <div id="dashboard-modal" class="fixed inset-0 z-[100] bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-6">
+        <div class="bg-surface border border-edge w-full max-w-lg rounded-3xl p-10 clean-shadow">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl font-black uppercase tracking-tighter text-text-main">Register Protocol</h2>
+                <button id="close-modal" class="text-text-muted hover:text-text-main transition-colors"><i data-lucide="x" class="w-6 h-6"></i></button>
+            </div>
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-xs font-black uppercase tracking-widest text-text-muted mb-3">Protocol Type</label>
+                    <select class="w-full bg-dark border border-edge p-4 rounded-xl text-text-main focus:border-primary focus:outline-none">
+                        <option>Heavy Lifting</option>
+                        <option>Cardio Burn</option>
+                        <option>Mobility Flow</option>
+                        <option>Sleep Recovery</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-black uppercase tracking-widest text-text-muted mb-3">Duration (Min)</label>
+                    <input type="number" value="60" class="w-full bg-dark border border-edge p-4 rounded-xl text-text-main focus:border-primary focus:outline-none">
+                </div>
+                <button type="button" onclick="alert('Protocol initialized.')" class="w-full bg-primary text-white py-5 rounded-xl font-black uppercase tracking-widest clean-btn">
+                    Confirm Sync
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Performance Chart Initialization
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Efficiency Index',
+                    data: [65, 78, 72, 85, 92, 88, 98],
+                    borderColor: '#10B981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    borderWidth: 4,
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: '#10B981',
+                    pointBorderColor: '#10B981',
+                    pointRadius: 4,
+                    pointHoverRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(0,0,0,0.03)' },
+                        ticks: { color: '#64748B', font: { family: 'Inter', size: 10, weight: '600' } }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#64748B', font: { family: 'Inter', size: 10, weight: '600' } }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

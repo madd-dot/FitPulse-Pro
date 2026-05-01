@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPulse Pro | High Performance Fitness SaaS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark text-text-main font-sans">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-edge">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <i data-lucide="activity" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tighter uppercase text-text-main">FitPulse <span class="text-primary">Pro</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase">
+                <a href="#features" class="hover:text-primary transition-colors text-text-muted">Features</a>
+                <a href="#pricing" class="hover:text-primary transition-colors text-text-muted">Pricing</a>
+                <a href="about.html" class="hover:text-primary transition-colors text-text-muted">About</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="login.html" class="text-sm font-semibold hover:text-primary transition-colors text-text-main">Login</a>
+                <a href="signup.html" class="bg-primary text-white px-6 py-2 rounded-full font-bold text-sm clean-btn">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Gym" class="w-full h-full object-cover opacity-30 scale-105 transition-transform duration-10000 hover:scale-100" 
+                 referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl px-6 text-center">
+            <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none mb-6 fade-in text-text-main">
+                TRAIN LIKE THE <span class="text-primary">ELITE.</span>
+            </h1>
+            <p class="text-xl text-text-muted mb-10 max-w-2xl mx-auto fade-in" style="animation-delay: 0.2s">
+                The most advanced fitness analytics platform for professional athletes and serious performers. Real-time tracking, biometric sync, and AI coaching.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in" style="animation-delay: 0.4s">
+                <a href="signup.html" class="w-full sm:w-auto bg-primary text-white px-10 py-4 rounded-full font-black text-lg tracking-tight uppercase clean-btn flex items-center justify-center gap-2">
+                    Get Started Free <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#features" class="w-full sm:w-auto border border-edge hover:bg-white px-10 py-4 rounded-full font-bold text-lg tracking-tight uppercase transition-all text-text-main">
+                    Explore Features
+                </a>
+            </div>
+        </div>
+        
+        <!-- Stats Bar -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-7xl px-6 hidden lg:block">
+            <div class="grid grid-cols-4 gap-1 border-t border-white/10 pt-8">
+                <div>
+                    <span class="block text-3xl font-black text-primary">50K+</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest font-bold">Active Members</span>
+                </div>
+                <div>
+                    <span class="block text-3xl font-black text-primary">#1</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest font-bold">Performance App</span>
+                </div>
+                <div>
+                    <span class="block text-3xl font-black text-primary">99%</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest font-bold">Client Success</span>
+                </div>
+                <div>
+                    <span class="block text-3xl font-black text-primary">FREE</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest font-bold">Trial Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-dark relative px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">ENGINEERED FOR <span class="text-primary italic">RESULTS.</span></h2>
+                    <p class="text-gray-400 text-lg">Stop guessing. Start growing. Our suite of professional tools gives you the edge you need to shatter your plateaus.</p>
+                </div>
+                <div class="text-primary font-mono text-sm tracking-widest">[ 01 — CAPABILITIES ]</div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-surface border border-edge p-10 rounded-2xl group hover:border-primary transition-all scroll-reveal clean-shadow">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-8 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all text-primary">
+                        <i data-lucide="zap" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 italic text-text-main">Biometric Sync</h3>
+                    <p class="text-text-muted leading-relaxed">Seamlessly connect your Apple Watch, Fitbit, or Garmin. We analyze HRV, RHR, and sleep quality in real-time.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-surface border border-edge p-10 rounded-2xl group hover:border-primary transition-all scroll-reveal clean-shadow">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-8 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all text-primary">
+                        <i data-lucide="bar-chart-3" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 italic text-text-main">AI Analytics</h3>
+                    <p class="text-text-muted leading-relaxed">Our proprietary algorithms predict your fatigue levels and suggest the optimal training intensity for today.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-surface border border-edge p-10 rounded-2xl group hover:border-primary transition-all scroll-reveal clean-shadow">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-8 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all text-primary">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 italic text-text-main">Elite Community</h3>
+                    <p class="text-text-muted leading-relaxed">Access private leaderboards, verified pro workouts, and connect with other high-performers in your area.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-surface border-y border-edge px-6">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-text-main">CHOOSE YOUR <span class="text-primary">LEVEL.</span></h2>
+            <p class="text-text-muted text-lg">No hidden fees. No bullshit. Cancel anytime.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Free Plan -->
+            <div class="bg-dark border border-edge p-12 rounded-3xl relative scroll-reveal clean-shadow">
+                <h3 class="text-xl font-bold text-text-muted uppercase tracking-widest mb-2">Essential</h3>
+                <div class="text-5xl font-black mb-8 text-text-main">$0 <span class="text-lg text-text-muted font-normal">/mo</span></div>
+                <ul class="space-y-4 mb-10 text-left">
+                    <li class="flex items-center gap-3"><i data-lucide="check" class="text-primary w-5 h-5"></i> Basic Workout Logging</li>
+                    <li class="flex items-center gap-3"><i data-lucide="check" class="text-primary w-5 h-5"></i> Community Access</li>
+                    <li class="flex items-center gap-3"><i data-lucide="check" class="text-primary w-5 h-5"></i> Standard Analytics</li>
+                    <li class="text-gray-400 line-through flex items-center gap-3"><i data-lucide="x" class="text-gray-400 w-5 h-5"></i> Biometric Integration</li>
+                </ul>
+                <a href="signup.html" class="block w-full border border-edge py-4 rounded-xl font-bold hover:bg-white transition-all text-center text-text-main">Start Training</a>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="bg-dark border-2 border-primary p-12 rounded-3xl relative scroll-reveal overflow-hidden clean-shadow">
+                <div class="absolute top-0 right-0 bg-primary text-white px-6 py-2 font-black text-xs uppercase tracking-widest rotate-45 translate-x-10 translate-y-4">Popular</div>
+                <h3 class="text-xl font-bold text-primary uppercase tracking-widest mb-2">Pro Mastery</h3>
+                <div class="text-5xl font-black mb-8 text-text-main">$19 <span class="text-lg text-text-muted font-normal">/mo</span></div>
+                <ul class="space-y-4 mb-10 text-left text-text-main">
+                    <li class="flex items-center gap-3"><i data-lucide="check" class="text-primary w-5 h-5"></i> Advanced Biometric Sync</li>
+                    <li class="flex items-center gap-3"><i data-lucide="check" class="text-primary w-5 h-5"></i> Personal AI Coach</li>
+                    <li class="flex items-center gap-3"><i data-lucide="check" class="text-primary w-5 h-5"></i> Video Form Analysis</li>
+                    <li class="flex items-center gap-3"><i data-lucide="check" class="text-primary w-5 h-5"></i> Private Team Coaching</li>
+                </ul>
+                <a href="signup.html" class="block w-full bg-primary text-white py-4 rounded-xl font-black hover:scale-[1.02] transition-all text-center clean-btn">Go Unlimited</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-dark px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <i data-lucide="activity" class="text-primary w-8 h-8"></i>
+                        <span class="text-xl font-black uppercase tracking-tighter">FitPulse Pro</span>
+                    </div>
+                    <p class="text-gray-500 max-w-sm mb-8 leading-relaxed">
+                        Redefining the digital fitness experience for those who demand excellence in every rep.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full border border-edge flex items-center justify-center hover:border-primary transition-colors cursor-pointer text-gray-400 hover:text-primary">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </div>
+                        <div class="w-10 h-10 rounded-full border border-edge flex items-center justify-center hover:border-primary transition-colors cursor-pointer text-gray-400 hover:text-primary">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </div>
+                        <div class="w-10 h-10 rounded-full border border-edge flex items-center justify-center hover:border-primary transition-colors cursor-pointer text-gray-400 hover:text-primary">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-black uppercase tracking-widest mb-6">Product</h4>
+                    <ul class="space-y-4 text-gray-500 text-sm font-semibold">
+                        <li><a href="#" class="hover:text-primary transition-colors">Safety</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Methods</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Success Stories</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Mobile App</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-black uppercase tracking-widest mb-6">Company</h4>
+                    <ul class="space-y-4 text-gray-500 text-sm font-semibold">
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-edge pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-bold text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2026 FitPulse Technologies Inc. All Rights Reserved.</p>
+                <p>Designed with <i data-lucide="heart" class="inline w-3 h-3 text-primary mx-1"></i> for the Elite.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

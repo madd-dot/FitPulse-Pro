@@ -1,0 +1,6 @@
+{
+  "name": "FitPulse Pro",
+  "description": "A high-performance SaaS platform for fitness tracking, analytics, and community engagement built with pure HTML, CSS, and JS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["SaaS", "Fitness Tracking", "Dashboard", "Analytics"]
+}
